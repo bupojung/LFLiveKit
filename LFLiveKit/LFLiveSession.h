@@ -15,7 +15,7 @@
 #import "LFLiveAudioConfiguration.h"
 #import "LFLiveVideoConfiguration.h"
 #import "LFLiveDebug.h"
-
+#import "GPUImage.h"
 
 
 typedef NS_ENUM(NSInteger,LFLiveCaptureType) {
@@ -71,14 +71,10 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 /** The captureDevicePosition control camraPosition ,default front*/
 @property (nonatomic, assign) AVCaptureDevicePosition captureDevicePosition;
 
-/** The beautyFace control capture shader filter empty or beautiy */
-@property (nonatomic, assign) BOOL beautyFace;
-
-/** The beautyLevel control beautyFace Level. Default is 0.5, between 0.0 ~ 1.0 */
-@property (nonatomic, assign) CGFloat beautyLevel;
-
-/** The brightLevel control brightness Level, Default is 0.5, between 0.0 ~ 1.0 */
-@property (nonatomic, assign) CGFloat brightLevel;
+/**
+ ** A filter to process Video from Camera
+ */
+@property (nonatomic, strong, nullable) GPUImageOutput<GPUImageInput> *filter;
 
 /** The torch control camera zoom scale default 1.0, between 1.0 ~ 3.0 */
 @property (nonatomic, assign) CGFloat zoomScale;
