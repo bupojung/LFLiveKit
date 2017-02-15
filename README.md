@@ -30,6 +30,8 @@ LFLiveKit
 - [x] 	Swift Support
 - [x] 	Support Single Video or Audio 
 - [x] 	Support External input video or audio(Screen recording or Peripheral)
+- [x]   Support Custom Filter
+- [ ]   todo: Face detect with STICKER on face
 - [ ] 	~~FLV package and send~~
 
 ## Requirements
